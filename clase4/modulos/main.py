@@ -7,8 +7,12 @@
 #saludo_nombre("Sarai")
 #saludo_nombre("Pecas")
 
-from saludos import *
+#from saludos import *
 
-saludo()
-saludo_nombre("Pecas")
-saludo_nombre_completo("Sara", "Falcon")
+#saludo()
+#saludo_nombre("Pecas")
+#saludo_nombre_completo("Sara", "Falcon")
+
+from carpetas import crear_carpetas
+
+crear_carpetas("prueba_carpeta", 3)
