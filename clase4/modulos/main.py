@@ -14,5 +14,8 @@
 #saludo_nombre_completo("Sara", "Falcon")
 
 from carpetas import crear_carpetas
+from carpetas import borrar_carpeta
 
-crear_carpetas("prueba_carpeta", 3)
+#crear_carpetas("prueba_carpeta", 3)
+
+borrar_carpeta("prueba_carpeta", 4)
