@@ -12,5 +12,5 @@ with open("texto.txt") as archivo:
 print("=" * 50)
 
 with open("carpetas.txt") as archivo:
-    for linea in archivo.readlines():
+    for linea in archivo.readlines(): #con este lee líneas en plural, si le pongo readline lee carpeta1 y cada caracter lo pone en una linea
         print(linea)
