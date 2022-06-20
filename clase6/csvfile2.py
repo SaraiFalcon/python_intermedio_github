@@ -8,7 +8,11 @@
 
 
 import csv
+from multiprocessing.sharedctypes import Value
 import os
+import time
+
+start = time.time()
 
 os.system('cls')
 ruta = "C:\\Users\\subex\\Desktop\\python_intermedio_github\\clase6\\practica\\"
@@ -25,6 +29,14 @@ with open('console_games.csv') as csvfile:
         except FileExistsError as ex:
             pass
 
-        ruta_archivo = f"{ruta}{row['Platform']}\\{row['Year']}\\archivo.txt"
-        with open(ruta_archivo, 'a') as archivo:
-            archivo.write(row)
+        if row['Platform']:
+            ruta_archivo = f"{ruta}{row['Platform']}\\{row['Year']}\\archivo.txt"
+            cadena = ''
+
+            for key, value in row.items():
+                cadena += value + ","
+            
+            cadena += "\n"
+
+            with open(ruta_archivo, 'a') as archivo:
+                archivo.write(cadena)
