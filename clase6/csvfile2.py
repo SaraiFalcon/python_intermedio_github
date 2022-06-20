@@ -19,10 +19,12 @@ with open('console_games.csv') as csvfile:
         #print(f"plataforma => {row['Platform']} año=> {row['Year']}")
         
         try:
-            if row['Platform']:
-                os.makedirs(f"{ruta}{row['Platform']}\\{row['Year']}")
+            if row['Platform']: #si tiene dato en platform crea la carpeta, si no crea carpeta con el nombre del año porque el dato vacío es un false
+                os.makedirs(f"{ruta}{row['Platform']}\\{row['Year']}") #con makedirs si no existe la carpeta la crea
 
         except FileExistsError as ex:
             pass
 
-        
+        ruta_archivo = f"{ruta}{row['Platform']}\\{row['Year']}\\archivo.txt"
+        with open(ruta_archivo, 'a') as archivo:
+            archivo.write(row)
