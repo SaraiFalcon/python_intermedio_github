@@ -20,7 +20,7 @@ ruta = "C:\\Users\\subex\\Desktop\\python_intermedio_github\\clase6\\practica\\"
 with open('console_games.csv') as csvfile:
     reader = csv.DictReader(csvfile)
     for row in reader:
-        #print(f"plataforma => {row['Platform']} año=> {row['Year']}")
+        print(f"plataforma => {row['Platform']} año=> {row['Year']}")
         
         try:
             if row['Platform']: #si tiene dato en platform crea la carpeta, si no crea carpeta con el nombre del año porque el dato vacío es un false
@@ -40,3 +40,7 @@ with open('console_games.csv') as csvfile:
 
             with open(ruta_archivo, 'a') as archivo:
                 archivo.write(cadena)
+                
+end = time.time()
+
+print(end - start)
