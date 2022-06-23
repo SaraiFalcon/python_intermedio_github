@@ -10,5 +10,6 @@ cur.execute("SELECT * FROM usuarios;")
 
 print(cur.fetchone())
 
+#Cierre de conexiones de BD
 cur.close()
 conn.close()
