@@ -1,4 +1,7 @@
 import psycopg2
+import os
+
+os.system('cls')
 
 #abrimos la conexión
 conn = psycopg2.connect("dbname=python_intermedio_db user=postgres password=root")

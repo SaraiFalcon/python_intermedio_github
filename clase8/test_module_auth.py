@@ -13,6 +13,6 @@ if is_authenticated("shudleston5", "XeL8MY"):
 else:
     print("credenciales incorrectas")
 
-if  not is_authenticated("shudleston5", "XeL8MYx"):
+if  not is_authenticated("shudleston5", "XeL8MYx"): #Este es cuando no le puse el password correcto
     print("credenciales invalidas")
     
